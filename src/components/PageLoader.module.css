@@ -1,0 +1,43 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--primary);
+  margin-bottom: var(--sp-2);
+}
+
+.line {
+  width: 120px;
+  height: 1.5px;
+  background-color: var(--accent);
+  transform-origin: left;
+  margin-bottom: var(--sp-3);
+}
+
+.tagline {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--primary);
+  opacity: 0.6;
+}

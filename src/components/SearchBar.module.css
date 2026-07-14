@@ -1,0 +1,310 @@
+.wrapper {
+  padding: 0 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 20;
+  margin-top: -30px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  background: var(--white);
+  border: 1px solid var(--border-mid);
+  border-radius: 999px;
+  padding: 0 8px 0 0;
+  box-shadow: var(--shadow-float);
+  gap: 0;
+  width: 100%;
+  overflow: visible;
+  position: relative;
+}
+
+/* ── Custom Dropdown ── */
+.dropdownWrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.dropdownTrigger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 20px;
+  width: 100%;
+  height: 90px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  transition: background 0.25s var(--ease-luxury);
+  border-radius: 999px;
+}
+
+.dropdownTrigger:hover {
+  background: rgba(13, 43, 29, 0.03);
+}
+
+.dropdownOpen {
+  background: rgba(13, 43, 29, 0.04);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.triggerValue {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 20px);
+  display: block;
+  transition: color 0.2s;
+}
+
+.placeholder {
+  color: var(--text-muted);
+}
+
+.chevron {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  transition: transform 0.25s var(--ease-luxury), color 0.2s;
+  flex-shrink: 0;
+}
+
+.chevronUp {
+  transform: translateY(-50%) rotate(180deg);
+  color: var(--primary);
+}
+
+/* ── Dropdown Panel ── */
+.dropdownPanel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 200px;
+  background: var(--white);
+  border: 1px solid var(--border-mid);
+  border-radius: 20px;
+  box-shadow: 0 16px 56px rgba(13, 43, 29, 0.14), 0 4px 16px rgba(13, 43, 29, 0.06);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  z-index: 9999;
+  overflow: hidden;
+  list-style: none;
+  padding: 6px;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 11px 16px;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.18s var(--ease-luxury), color 0.18s;
+  white-space: nowrap;
+}
+
+.dropdownItem:hover {
+  background: rgba(13, 43, 29, 0.055);
+  color: var(--primary);
+}
+
+.dropdownItemActive {
+  background: rgba(212, 175, 106, 0.12);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.dropdownItemActive:hover {
+  background: rgba(212, 175, 106, 0.18);
+}
+
+.checkIcon {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ── Divider ── */
+.divider {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* ── Search Button ── */
+.searchBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  padding: 0 32px;
+  height: 64px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin: 0 4px;
+  transition: background 0.3s var(--ease-luxury), transform 0.2s, box-shadow 0.3s;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(13, 43, 29, 0.25);
+}
+
+.searchBtn:hover {
+  background: #0f3523;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 32px rgba(13, 43, 29, 0.35);
+}
+
+:global([data-theme="dark"]) .searchBtn {
+  color: #0c100e;
+}
+
+:global([data-theme="dark"]) .searchBtn:hover {
+  background: rgba(250, 249, 246, 0.85);
+  color: #0c100e;
+}
+
+:global([data-theme="dark"]) .dropdownPanel {
+  background: rgba(18, 26, 22, 0.97);
+  border-color: rgba(250, 249, 246, 0.12);
+  box-shadow: 0 16px 56px rgba(0, 0, 0, 0.55), 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+:global([data-theme="dark"]) .dropdownItem:hover {
+  background: rgba(250, 249, 246, 0.06);
+  color: var(--primary);
+}
+
+:global([data-theme="dark"]) .dropdownItemActive {
+  background: rgba(212, 175, 106, 0.1);
+}
+
+:global([data-theme="dark"]) .dropdownTrigger:hover {
+  background: rgba(250, 249, 246, 0.04);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .wrapper { padding: 0 24px; margin-top: 32px; }
+
+  .bar {
+    height: auto;
+    border-radius: 28px;
+    flex-direction: column;
+    padding: 12px 16px;
+    gap: 0;
+    align-items: stretch;
+    overflow: visible;
+  }
+
+  .dropdownWrap {
+    flex: none;
+    width: 100%;
+  }
+
+  .dropdownTrigger {
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    gap: 0;
+  }
+
+  .dropdownTrigger:last-of-type {
+    border-bottom: none;
+  }
+
+  .dropdownTrigger:hover {
+    background: none;
+  }
+
+  .dropdownOpen {
+    background: none;
+  }
+
+  .label {
+    min-width: 110px;
+    flex-shrink: 0;
+  }
+
+  .triggerValue {
+    flex: 1;
+    font-size: 13px;
+    text-align: right;
+    padding-right: 24px;
+  }
+
+  .chevron {
+    position: static;
+    transform: none;
+    margin-left: auto;
+  }
+
+  .chevronUp {
+    transform: rotate(180deg);
+  }
+
+  .dropdownPanel {
+    left: 0;
+    right: 0;
+    min-width: unset;
+    top: calc(100% + 6px);
+    border-radius: 16px;
+  }
+
+  .divider { display: none; }
+
+  .searchBtn {
+    height: 52px;
+    width: 100%;
+    justify-content: center;
+    border-radius: 14px;
+    margin: 12px 0 0 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper { padding: 0 16px; }
+}
+
+@media (max-width: 380px) {
+  .wrapper { padding: 0 12px; }
+  .bar { padding: 10px 12px; }
+  .searchBtn { height: 48px; font-size: 13px; }
+}

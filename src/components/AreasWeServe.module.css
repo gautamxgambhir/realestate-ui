@@ -1,0 +1,247 @@
+.section {
+  background-color: var(--bg);
+  padding: var(--sp-18) 0;
+  position: relative;
+  overflow: clip;
+}
+
+.header {
+  margin-bottom: var(--sp-12);
+}
+
+.subtitle {
+  display: block;
+  margin-bottom: var(--sp-2);
+}
+
+.title {
+  font-size: clamp(2rem, 5.5vw, 3.5rem);
+  font-weight: 500;
+  color: var(--primary);
+  line-height: 1.1;
+  margin-bottom: var(--sp-3);
+}
+
+.intro {
+  color: var(--text-muted);
+  max-width: 600px;
+  font-size: 1rem;
+}
+
+/* 12-Column Masonry Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--sp-6);
+  min-width: 0;
+}
+
+.card {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  height: 380px;
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+  transition: all 0.5s var(--ease-luxury);
+  border: 1px solid var(--border);
+  min-width: 0;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-mid);
+  box-shadow: var(--shadow-float);
+}
+
+/* Masonry spans */
+.gridLarge {
+  grid-column: span 7;
+}
+
+.gridNormal {
+  grid-column: span 5;
+}
+
+/* Make the last card span full width for asymmetry balance */
+.card:nth-child(5) {
+  grid-column: span 12;
+  height: 300px;
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+  }
+  .gridLarge, .gridNormal, .card:nth-child(5) {
+    grid-column: span 1;
+  }
+  .card {
+    height: 320px;
+  }
+  .title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.4rem;
+  }
+  .card {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  .card {
+    height: 240px;
+  }
+  .areaName {
+    font-size: 1.4rem;
+  }
+  .cardContent {
+    padding: var(--sp-4);
+  }
+}
+
+.imgWrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bgImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-luxury);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    var(--gradient-stop-1) 0%,
+    var(--gradient-stop-2) 60%,
+    var(--gradient-stop-3) 100%
+  );
+  transition: all 0.5s var(--ease-luxury);
+}
+
+.card:hover .bgImg {
+  transform: scale(1.04);
+}
+
+.card:hover .overlay {
+  background: linear-gradient(
+    to top,
+    var(--gradient-stop-1) 0%,
+    var(--gradient-stop-2) 75%,
+    var(--gradient-stop-3) 100%
+  );
+}
+
+/* Card Content Overlay */
+.cardContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--sp-6);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pinWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--white);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: var(--radius-btn);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.pin {
+  color: var(--accent);
+}
+
+.arrowWrapper {
+  width: var(--sp-8);
+  height: var(--sp-8);
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  transition: all 0.35s var(--ease-luxury);
+}
+
+.card:hover .arrowWrapper {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+  transform: rotate(45deg);
+}
+
+.info {
+  max-width: 480px;
+}
+
+.areaName {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 4vw, 2.2rem);
+  color: var(--primary);
+  margin-bottom: var(--sp-2);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.desc {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s var(--ease-luxury), transform 0.5s var(--ease-luxury);
+}
+
+.card:hover .desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .areaName {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,262 @@
+.footer {
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: var(--sp-12) 0 var(--sp-8) 0;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  overflow: clip;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-10);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: var(--sp-8);
+  min-width: 0;
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-6);
+  }
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+  }
+}
+
+/* Brand Column */
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.tagline {
+  font-family: var(--font-heading);
+  color: var(--accent);
+  font-style: italic;
+  font-size: 15px;
+  margin-bottom: var(--sp-3);
+}
+
+.aboutText {
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin-bottom: var(--sp-4);
+}
+
+.socials {
+  display: flex;
+  gap: 8px;
+}
+
+.socialLink {
+  width: var(--sp-6);
+  height: var(--sp-6);
+  border-radius: 50%;
+  border: 1px solid var(--border-mid);
+  background: var(--white);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s var(--ease-luxury);
+}
+
+.socialLink:hover {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Links Columns */
+.linksCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.colTitle {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: var(--sp-4);
+  font-weight: 500;
+}
+
+.linksList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.linksList a {
+  font-size: 14px;
+  color: var(--text-muted);
+  transition: all 0.35s var(--ease-luxury);
+  display: inline-block;
+}
+
+.linksList a:hover {
+  color: var(--primary);
+  transform: translateX(3px);
+}
+
+/* Contact Column */
+.contactCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+
+.contactIcon {
+  color: var(--accent);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Newsletter styling */
+.newsletter {
+  border-top: 1px solid var(--border);
+  padding-top: var(--sp-4);
+}
+
+.newsTitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--primary);
+  margin-bottom: var(--sp-2);
+  font-weight: 500;
+}
+
+.newsForm {
+  display: flex;
+  background: var(--white);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-btn);
+  padding: 4px;
+  overflow: hidden;
+  transition: all 0.35s var(--ease-luxury);
+}
+
+.newsForm:focus-within {
+  border-color: var(--primary);
+}
+
+.newsForm input {
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 6px 12px;
+  color: var(--primary);
+  font-family: var(--font-body);
+  font-size: 13px;
+}
+
+.newsForm button {
+  width: var(--sp-6);
+  height: var(--sp-6);
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: var(--white);
+  border: 1.5px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.35s var(--ease-luxury);
+}
+
+.newsForm button:hover {
+  background-color: transparent;
+  color: var(--primary);
+}
+
+.subscribedMsg {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  border-top: 1px solid var(--border);
+  padding-top: var(--sp-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+
+@media (max-width: 768px) {
+  .bottomBar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.copyright {
+  color: var(--text-muted);
+}
+
+.bottomLinks {
+  display: flex;
+  gap: var(--sp-4);
+}
+
+.bottomLinks a {
+  color: var(--text-muted);
+  transition: all 0.35s var(--ease-luxury);
+}
+
+.bottomLinks a:hover {
+  color: var(--primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

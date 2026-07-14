@@ -1,0 +1,99 @@
+.section {
+  background-color: var(--bg);
+  padding: var(--sp-18) 0;
+  position: relative;
+  overflow: clip;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-4);
+  align-items: center;
+  min-width: 0;
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: var(--sp-4) 0;
+  min-width: 0;
+}
+
+/* Thin vertical lines between columns */
+.statBox:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: var(--border-mid);
+}
+
+.number {
+  font-family: var(--font-heading);
+  font-size: clamp(3.2rem, 5.5vw, 5.5rem);
+  font-weight: 500;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: var(--sp-2);
+  letter-spacing: -0.02em;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+/* Responsiveness */
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: var(--sp-8);
+  }
+  
+  .statBox:nth-child(2)::after {
+    display: none; /* remove middle divider in 2x2 */
+  }
+  
+  .number {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: var(--sp-6);
+  }
+  
+  .statBox:not(:last-child)::after {
+    display: none;
+  }
+  
+  .number {
+    font-size: clamp(2.4rem, 10vw, 3.8rem);
+  }
+}
+
+@media (max-width: 380px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .number {
+    font-size: 3rem;
+  }
+}
