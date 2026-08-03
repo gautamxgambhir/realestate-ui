@@ -104,11 +104,9 @@ npm start
 
 ## Deployment
 
-Built for Netlify (config included) — but works on Vercel too.
+Built for Vercel — zero-config deployment, no setup required.
 
-**Netlify** — connect your GitHub repo at [netlify.com](https://netlify.com). The `netlify.toml` handles the build config automatically.
-
-**Vercel** — zero-config deployment:
+**Vercel (recommended)** — connect your GitHub repo at [vercel.com](https://vercel.com) for automatic deployments on every push. Or deploy via CLI:
 
 ```bash
 npm install -g vercel
