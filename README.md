@@ -76,45 +76,6 @@ realestate-ui/
 
 ---
 
-## Getting Started
-
-### Clone & install
-
-```bash
-git clone https://github.com/gautamxgambhir/realestate-ui.git
-cd realestate-ui
-npm install
-```
-
-### Run locally
-
-```bash
-npm run dev
-# → http://localhost:3000
-```
-
-### Build for production
-
-```bash
-npm run build
-npm start
-```
-
----
-
-## Deployment
-
-Built for Vercel — zero-config deployment, no setup required.
-
-**Vercel (recommended)** — connect your GitHub repo at [vercel.com](https://vercel.com) for automatic deployments on every push. Or deploy via CLI:
-
-```bash
-npm install -g vercel
-vercel
-```
-
----
-
 ## Project Structure
 
 ```
