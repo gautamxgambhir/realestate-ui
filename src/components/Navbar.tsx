@@ -60,7 +60,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
       <header className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
         <div className={styles.inner}>
           <button className={styles.logo} onClick={() => scrollTo("hero")}>
-            Propiedad
+            Elara Estates
           </button>
 
           <nav className={styles.links}>
@@ -98,7 +98,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className={styles.mobileHeader}>
-              <span className={styles.logo}>Propiedad</span>
+              <span className={styles.logo}>Elara Estates</span>
               <button className={styles.close} onClick={() => setMenuOpen(false)} aria-label="Close menu">✕</button>
             </div>
             <nav className={styles.mobileLinks}>

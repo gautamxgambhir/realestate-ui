@@ -11,9 +11,9 @@ interface HeroProps {
 
 const FEATURED = {
   name: "The Grand Horizon",
-  location: "Sector 16, Greater Noida West",
-  price: "₹3.85 Cr",
-  beds: "4 BHK",
+  location: "1 Collins Ave, Miami Beach",
+  price: "$4.2M",
+  beds: "4 BD",
   area: "3,850 sq.ft.",
   image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=85",
   thumbs: [
@@ -132,7 +132,7 @@ export default function Hero({ onOpenModal, onExplore }: HeroProps) {
             className={`${styles.chip} label-gold`}
             variants={fadeUp} custom={0} initial="hidden" animate="show"
           >
-            Greater Noida West &amp; Ghaziabad
+            Miami Beach &amp; Fort Lauderdale
           </motion.span>
 
           <motion.h1
@@ -160,7 +160,7 @@ export default function Hero({ onOpenModal, onExplore }: HeroProps) {
             variants={fadeUp} custom={2} initial="hidden" animate="show"
           >
             Exceptional residences for investors,<br />
-            families and NRIs — legally verified,<br />
+            families and international buyers — legally verified,<br />
             curated for the discerning few.
           </motion.p>
 
@@ -257,8 +257,8 @@ export default function Hero({ onOpenModal, onExplore }: HeroProps) {
                   className={styles.agentAvatar}
                 />
                 <div>
-                  <p className={styles.agentName}>Amit Vikram</p>
-                  <p className={styles.agentRole}>Senior Advisor, Propiedad</p>
+                  <p className={styles.agentName}>James Harlow</p>
+                  <p className={styles.agentRole}>Senior Advisor, Elara Estates</p>
                 </div>
                 <button className={styles.tourBtn} onClick={onOpenModal}>
                   Schedule Tour
@@ -269,7 +269,7 @@ export default function Hero({ onOpenModal, onExplore }: HeroProps) {
 
           {/* Floating stat pill */}
           <div className={styles.floatStat}>
-            <span className={styles.floatNum}>₹250Cr+</span>
+            <span className={styles.floatNum}>$2B+</span>
             <span className={styles.floatLabel}>Transactions Completed</span>
           </div>
         </motion.div>

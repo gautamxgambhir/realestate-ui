@@ -41,7 +41,7 @@ export default function PageLoader() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              PROPIEDAD
+              ELARA ESTATES
             </motion.h1>
             
             <motion.div

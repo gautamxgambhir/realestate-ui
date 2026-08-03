@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const STATS_DATA = [
   { value: "500+", label: "Properties Sold" },
   { value: "150+", label: "Happy Clients" },
-  { value: "₹250 Cr+", label: "Transaction Volume" },
+  { value: "$2B+", label: "Transaction Volume" },
   { value: "10+", label: "Years Experience" },
 ];
 

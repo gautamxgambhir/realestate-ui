@@ -15,39 +15,39 @@ interface AreaItem {
 
 const AREAS_DATA: AreaItem[] = [
   {
-    name: "Greater Noida West",
+    name: "Miami Beach",
     key: "noida-west",
     propertiesCount: "120+ Listings",
     image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=800&q=80",
-    description: "The crown jewel of residential high-rises and integrated smart townships with vast expressways."
+    description: "Iconic oceanfront living with world-class dining, Art Deco architecture, and vibrant nightlife steps from your door."
   },
   {
-    name: "Noida Extension",
+    name: "Brickell",
     key: "noida-ext",
     propertiesCount: "95+ Listings",
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
-    description: "Affordable luxury apartments, green corridors, excellent metro connectivity, and modern shopping malls."
+    description: "Miami's financial district: sleek high-rise condos, luxury rooftop pools, and seamless access to the city's best amenities."
   },
   {
-    name: "Ghaziabad Central",
+    name: "Fort Lauderdale",
     key: "ghaziabad",
     propertiesCount: "60+ Listings",
     image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80",
-    description: "Premium established sectors hosting expansive luxury commercial plazas and heritage villas."
+    description: "Waterfront estates along the Intracoastal, boating access, and a thriving arts and dining scene in the Venice of America."
   },
   {
-    name: "Indirapuram",
+    name: "Coral Gables",
     key: "indirapuram",
     propertiesCount: "45+ Listings",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-    description: "High-end gated residential societies, top-tier schools, premium hospitals, and gourmet hubs."
+    description: "Mediterranean-inspired architecture, top-ranked schools, lush tree-lined streets, and prestigious gated communities."
   },
   {
-    name: "Raj Nagar Extension",
+    name: "Aventura",
     key: "raj-nagar",
     propertiesCount: "35+ Listings",
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
-    description: "Rising hotbed of designer mid-rise residential towers and sports stadiums along elevated roads."
+    description: "Ultra-luxury towers on the Intracoastal with resort-style amenities, upscale shopping, and a relaxed coastal lifestyle."
   }
 ];
 
@@ -86,7 +86,7 @@ export default function AreasWeServe({ onSelectArea }: AreasWeServeProps) {
             <span className="label-gold subtitle">Prime Locations</span>
             <h2 className={styles.title}>Areas We Serve</h2>
             <p className={styles.intro}>
-              Explore high-potential real estate investment corridors across Greater Noida West and Ghaziabad. Click any location to filter available properties.
+              Explore high-potential real estate investment corridors across Miami Beach and Fort Lauderdale. Click any location to filter available properties.
             </p>
           </div>
         </div>

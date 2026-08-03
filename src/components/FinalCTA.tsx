@@ -19,10 +19,10 @@ export default function FinalCTA({ onOpenModal }: FinalCTAProps) {
             
             {/* Info Column */}
             <div className={styles.infoCol}>
-              <span className={styles.tag}>Connect With Propiedad</span>
+              <span className={styles.tag}>Connect With Elara Estates</span>
               <h2 className={styles.title}>Where Vision Becomes Your Address.</h2>
               <p className={styles.desc}>
-                Unlock exclusive off-market listings, legal consultations, and bespoke private tours in Greater Noida West &amp; Ghaziabad with our seasoned advisory team.
+                Unlock exclusive off-market listings, legal consultations, and bespoke private tours in Miami Beach &amp; Fort Lauderdale with our seasoned advisory team.
               </p>
 
               <button 

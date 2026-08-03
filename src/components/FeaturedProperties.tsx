@@ -12,7 +12,7 @@ interface Property {
   location: string;
   locationKey: "noida-west" | "noida-ext" | "ghaziabad" | "indirapuram" | "raj-nagar";
   price: string;
-  priceNum: number; // in Crores
+  priceNum: number; // in millions USD
   bedrooms: string;
   area: string;
   image: string;
@@ -25,25 +25,25 @@ const PROPERTIES_DATA: Property[] = [
     id: "prop-1",
     name: "The Grand Horizon Penthouse",
     category: "penthouse",
-    location: "Greater Noida West",
+    location: "Miami Beach",
     locationKey: "noida-west",
-    price: "₹3.85 Cr",
-    priceNum: 3.85,
-    bedrooms: "4 BHK",
+    price: "$4.2M",
+    priceNum: 4.2,
+    bedrooms: "4 BD",
     area: "3,850 sq.ft.",
     image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80",
-    description: "A stunning glass-facade duplex penthouse featuring a private sky garden, a heated plunge pool, and breathtaking panoramic views of the Noida skyline. Designed with custom Italian cabinetry and luxury smart-automation.",
+    description: "A stunning glass-facade duplex penthouse featuring a private sky garden, a heated plunge pool, and breathtaking panoramic views of the Miami skyline. Designed with custom Italian cabinetry and luxury smart-automation.",
     highlights: ["Private Plunge Pool", "24/7 Concierge", "Duplex Layout", "Sky Bar & Deck"],
   },
   {
     id: "prop-2",
     name: "Aurelia Whispering Meadows Villa",
     category: "villa",
-    location: "Indirapuram, Ghaziabad",
+    location: "Coral Gables",
     locationKey: "indirapuram",
-    price: "₹6.50 Cr",
-    priceNum: 6.50,
-    bedrooms: "5 BHK",
+    price: "$7.1M",
+    priceNum: 7.1,
+    bedrooms: "5 BD",
     area: "5,400 sq.ft.",
     image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1000&q=80",
     description: "Premium architectural masterpiece styled in Spanish hacienda themes. Expansive wrap-around decks, high ceilings, private elevator, home cinema, and state-of-the-art kitchen. Surrounded by serene manicured lawns.",
@@ -53,11 +53,11 @@ const PROPERTIES_DATA: Property[] = [
     id: "prop-3",
     name: "Elysian Heights Premium Suite",
     category: "apartment",
-    location: "Noida Extension",
+    location: "Brickell",
     locationKey: "noida-ext",
-    price: "₹1.85 Cr",
-    priceNum: 1.85,
-    bedrooms: "3 BHK",
+    price: "$2.0M",
+    priceNum: 2.0,
+    bedrooms: "3 BD",
     area: "2,150 sq.ft.",
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80",
     description: "Elegantly crafted high-rise luxury apartment suite featuring Italian marble floors, bespoke walnut paneling, and an expansive walk-in closet. Comes with an exclusive 5-year membership to the elite Club Elysium.",
@@ -67,10 +67,10 @@ const PROPERTIES_DATA: Property[] = [
     id: "prop-4",
     name: "The Corporate Crest Hub",
     category: "commercial",
-    location: "Ghaziabad Central",
+    location: "Fort Lauderdale",
     locationKey: "ghaziabad",
-    price: "₹8.20 Cr",
-    priceNum: 8.20,
+    price: "$9.0M",
+    priceNum: 9.0,
     bedrooms: "Retail / Office",
     area: "6,800 sq.ft.",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80",
@@ -81,11 +81,11 @@ const PROPERTIES_DATA: Property[] = [
     id: "prop-5",
     name: "Sovereign Estate Villa",
     category: "villa",
-    location: "Greater Noida West",
+    location: "Miami Beach",
     locationKey: "noida-west",
-    price: "₹4.95 Cr",
-    priceNum: 4.95,
-    bedrooms: "4 BHK",
+    price: "$5.4M",
+    priceNum: 5.4,
+    bedrooms: "4 BD",
     area: "4,200 sq.ft.",
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80",
     description: "A contemporary architectural statement villa characterized by stark minimalist lines, extensive wood and glass elements, and a private infinity-edge swimming pool. Features high-security access control.",
@@ -95,14 +95,14 @@ const PROPERTIES_DATA: Property[] = [
     id: "prop-6",
     name: "The Zenith Sky Duplex",
     category: "penthouse",
-    location: "Raj Nagar Extension, Ghaziabad",
+    location: "Aventura",
     locationKey: "raj-nagar",
-    price: "₹2.90 Cr",
-    priceNum: 2.90,
-    bedrooms: "3 BHK",
+    price: "$3.2M",
+    priceNum: 3.2,
+    bedrooms: "3 BD",
     area: "2,950 sq.ft.",
     image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1000&q=80",
-    description: "Elegant duplex penthouse layout presenting a fluid transition between indoor living areas and a 1000 sq.ft. private sky terrace. Furnished with designer fittings and premium energy efficient elements.",
+    description: "Elegant duplex penthouse layout presenting a fluid transition between indoor living areas and a 1,000 sq.ft. private sky terrace. Furnished with designer fittings and premium energy efficient elements.",
     highlights: ["1,000 sq.ft. Sky Terrace", "Designer Kitchen Fitments", "Solar Hybrid Backup", "VRV Air Conditioning"],
   },
 ];
@@ -143,20 +143,20 @@ export default function FeaturedProperties({ searchFilters, onOpenScheduleVisit 
       // 4. Hero Bedrooms Filter
       if (searchFilters.bedrooms !== "all") {
         if (searchFilters.bedrooms === "5") {
-          const bhkNum = parseInt(prop.bedrooms);
-          if (isNaN(bhkNum) || bhkNum < 5) return false;
+          const bdNum = parseInt(prop.bedrooms);
+          if (isNaN(bdNum) || bdNum < 5) return false;
         } else {
-          if (!prop.bedrooms.includes(`${searchFilters.bedrooms} BHK`)) return false;
+          if (!prop.bedrooms.startsWith(`${searchFilters.bedrooms} BD`)) return false;
         }
       }
 
       // 5. Hero Budget Filter
       if (searchFilters.budget !== "all") {
         const price = prop.priceNum;
-        if (searchFilters.budget === "u-1.5cr" && price >= 1.5) return false;
-        if (searchFilters.budget === "1.5-3cr" && (price < 1.5 || price > 3.0)) return false;
-        if (searchFilters.budget === "3-5cr" && (price < 3.0 || price > 5.0)) return false;
-        if (searchFilters.budget === "5cr+" && price <= 5.0) return false;
+        if (searchFilters.budget === "u-1.5cr" && price >= 2.0) return false;
+        if (searchFilters.budget === "1.5-3cr" && (price < 2.0 || price > 4.0)) return false;
+        if (searchFilters.budget === "3-5cr" && (price < 4.0 || price > 6.0)) return false;
+        if (searchFilters.budget === "5cr+" && price <= 6.0) return false;
       }
 
       return true;

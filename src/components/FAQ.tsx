@@ -12,20 +12,20 @@ interface FAQItem {
 
 const FAQS_DATA: FAQItem[] = [
   {
-    question: "How do I schedule a site visit with Propiedad?",
-    answer: "Scheduling a site visit is simple. Click the 'Schedule Site Visit' button on the hero section or 'Schedule Private Tour' inside a property's details page. Fill in your name and phone, and our senior property advisor will call you within 2 hours to coordinate the dates, local site pick-up/drop-off, and developer meetings."
+    question: "How do I schedule a site visit with Elara Estates?",
+    answer: "Scheduling a site visit is simple. Click the 'Schedule Site Visit' button on the hero section or 'Schedule Private Tour' inside a property's details page. Fill in your name and phone, and our senior property advisor will call you within 2 hours to coordinate the dates, local transportation, and developer meetings."
   },
   {
     question: "Do you assist with securing home financing and loans?",
-    answer: "Yes, we provide end-to-end financing support. Propiedad has corporate tie-ups with leading financial institutions (such as HDFC Bank, SBI, ICICI, and Axis Bank). Our financial specialists help you prepare documentation, submit applications, check eligibility limits, and secure the most competitive interest rates at zero extra cost to you."
+    answer: "Yes, we provide end-to-end financing support. Elara Estates has corporate tie-ups with leading financial institutions and mortgage brokers across Florida. Our financial specialists help you prepare documentation, submit applications, check eligibility, and secure the most competitive rates at zero extra cost to you."
   },
   {
     question: "Are all property listings on your site verified?",
-    answer: "Yes, 100% of our properties are legally and physically verified. Before listing any project, our legal consultants audit the developer's land title clearance, builder-buyer agreements, RERA registration numbers, local municipal licenses (GNIDA, GDA), and structural NOC compliance."
+    answer: "Yes, 100% of our properties are legally and physically verified. Before listing any project, our legal consultants audit the developer's title clearance, purchase agreements, local municipal licenses, and structural compliance. Every listing meets Florida real estate regulatory standards."
   },
   {
-    question: "Can I invest in under-construction projects through you?",
-    answer: "Absolutely. We represent some of the most reliable and high-growth under-construction projects in Greater Noida West and Ghaziabad. We help you assess structural progress, evaluate payment schedules (e.g. construction-linked plans), audit builder registry details, and verify Escrow account declarations."
+    question: "Can I invest in pre-construction projects through you?",
+    answer: "Absolutely. We represent some of the most reliable and high-growth pre-construction projects in Miami Beach and Fort Lauderdale. We help you assess construction progress, evaluate payment schedules, audit developer registry details, and verify escrow account protections."
   }
 ];
 

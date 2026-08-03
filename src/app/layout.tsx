@@ -18,22 +18,22 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Propiedad — Luxury Real Estate, Greater Noida West & Ghaziabad",
+  title: "Elara Estates — Luxury Real Estate, Miami Beach & Fort Lauderdale",
   description:
-    "Discover exceptional residential and commercial properties in Greater Noida West and Ghaziabad. Propiedad — Where Vision Becomes Address.",
+    "Discover exceptional residential and commercial properties in Miami Beach and Fort Lauderdale. Elara Estates — Where Vision Becomes Address.",
   keywords: [
-    "luxury real estate Noida",
-    "premium properties Greater Noida West",
-    "Ghaziabad luxury homes",
-    "HNI real estate India",
-    "Propiedad",
+    "luxury real estate Miami",
+    "premium properties Miami Beach",
+    "Fort Lauderdale luxury homes",
+    "high-end real estate Florida",
+    "Elara Estates",
   ],
   openGraph: {
-    title: "Propiedad — Where Vision Becomes Address",
+    title: "Elara Estates — Where Vision Becomes Address",
     description:
-      "Luxury real estate advisory for HNIs, investors and NRIs in Greater Noida West & Ghaziabad.",
+      "Luxury real estate advisory for investors, families and international buyers in Miami Beach & Fort Lauderdale.",
     type: "website",
-    locale: "en_IN",
+    locale: "en_US",
   },
 };
 

@@ -22,7 +22,7 @@ export default function About() {
               {/* Founder Image */}
               <img 
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" 
-                alt="Amit Vikram, Founder of Propiedad" 
+                alt="James Harlow, Founder of Elara Estates" 
                 className={styles.founderImg} 
               />
               <div className={styles.goldFrame} />
@@ -48,22 +48,22 @@ export default function About() {
             
             <div className={styles.content}>
               <p className={styles.paragraph}>
-                At Propiedad, we believe that real estate transactions should be built on absolute clarity and trust. Our journey began with a simple observation: the Greater Noida West and Ghaziabad property markets were expanding rapidly, but buyers lacked access to neutral, highly-verified advisory services.
+                At Elara Estates, we believe that real estate transactions should be built on absolute clarity and trust. Our journey began with a simple observation: the Miami Beach and Fort Lauderdale property markets were expanding rapidly, but buyers lacked access to neutral, highly-verified advisory services.
               </p>
               <p className={styles.paragraph}>
-                We established Propiedad to operate as a high-end advisory rather than a standard brokerage. We perform rigorous structural, financial, and legal background checks on every single developer and project before listing them in our collection.
+                We established Elara Estates to operate as a high-end advisory rather than a standard brokerage. We perform rigorous structural, financial, and legal background checks on every single developer and project before listing them in our collection.
               </p>
               <p className={styles.paragraph}>
-                Whether you are securing a home for your family's next generation, establishing corporate offices, or securing high-yield commercial assets, Propiedad ensures your path is secure, transparent, and legally sound.
+                Whether you are securing a home for your family's next generation, establishing corporate offices, or securing high-yield commercial assets, Elara Estates ensures your path is secure, transparent, and legally sound.
               </p>
             </div>
 
             <div className={styles.signatureBox}>
               <div>
-                <h4 className={styles.founderName}>Amit Vikram</h4>
+                <h4 className={styles.founderName}>James Harlow</h4>
                 <p className={styles.founderTitle}>Founder &amp; Managing Director</p>
               </div>
-              <div className={styles.brandSign}>PROPIEDAD</div>
+              <div className={styles.brandSign}>ELARA ESTATES</div>
             </div>
           </motion.div>
         </div>

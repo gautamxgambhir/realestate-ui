@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import { Search, MapPin, IndianRupee, Building2, BedDouble, ChevronDown, Check } from "lucide-react";
+import { Search, MapPin, DollarSign, Building2, BedDouble, ChevronDown, Check } from "lucide-react";
 import styles from "./SearchBar.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -90,19 +90,19 @@ interface SearchBarProps {
 
 const LOCATIONS: Option[] = [
   { value: "", label: "Any Location" },
-  { value: "noida-west", label: "Greater Noida West" },
-  { value: "noida-ext", label: "Noida Extension" },
-  { value: "ghaziabad", label: "Ghaziabad" },
-  { value: "indirapuram", label: "Indirapuram" },
-  { value: "raj-nagar", label: "Raj Nagar Ext." },
+  { value: "noida-west", label: "Miami Beach" },
+  { value: "noida-ext", label: "Brickell" },
+  { value: "ghaziabad", label: "Fort Lauderdale" },
+  { value: "indirapuram", label: "Coral Gables" },
+  { value: "raj-nagar", label: "Aventura" },
 ];
 
 const BUDGETS: Option[] = [
   { value: "", label: "Any Budget" },
-  { value: "u-1.5cr", label: "Under ₹1.5 Cr" },
-  { value: "1.5-3cr", label: "₹1.5 – ₹3 Cr" },
-  { value: "3-5cr", label: "₹3 – ₹5 Cr" },
-  { value: "5cr+", label: "₹5 Cr+" },
+  { value: "u-1.5cr", label: "Under $2M" },
+  { value: "1.5-3cr", label: "$2M – $4M" },
+  { value: "3-5cr", label: "$4M – $6M" },
+  { value: "5cr+", label: "$6M+" },
 ];
 
 const TYPES: Option[] = [
@@ -113,12 +113,12 @@ const TYPES: Option[] = [
   { value: "commercial", label: "Commercial" },
 ];
 
-const BHKS: Option[] = [
-  { value: "", label: "Any BHK" },
-  { value: "2", label: "2 BHK" },
-  { value: "3", label: "3 BHK" },
-  { value: "4", label: "4 BHK" },
-  { value: "5", label: "5+ BHK" },
+const BEDROOMS: Option[] = [
+  { value: "", label: "Any Beds" },
+  { value: "2", label: "2 Beds" },
+  { value: "3", label: "3 Beds" },
+  { value: "4", label: "4 Beds" },
+  { value: "5", label: "5+ Beds" },
 ];
 
 export default function SearchBar({ onSearch }: SearchBarProps) {
@@ -155,7 +155,7 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
 
         <CustomDropdown
           label="Budget"
-          icon={<IndianRupee size={12} strokeWidth={2.5} />}
+          icon={<DollarSign size={12} strokeWidth={2.5} />}
           options={BUDGETS}
           value={form.budget}
           onChange={v => handle("budget", v)}
@@ -176,12 +176,12 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
         <div className={styles.divider} />
 
         <CustomDropdown
-          label="BHK"
+          label="Beds"
           icon={<BedDouble size={12} strokeWidth={2.5} />}
-          options={BHKS}
+          options={BEDROOMS}
           value={form.bhk}
           onChange={v => handle("bhk", v)}
-          placeholder="Any BHK"
+          placeholder="Any Beds"
         />
 
         <button type="submit" className={styles.searchBtn} aria-label="Search properties">

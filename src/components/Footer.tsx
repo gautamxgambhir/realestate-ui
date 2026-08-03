@@ -42,10 +42,10 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className={styles.brandCol}>
-            <h3 className={styles.logo}>PROPIEDAD</h3>
+            <h3 className={styles.logo}>ELARA ESTATES</h3>
             <p className={styles.tagline}>"Where Vision Becomes Address"</p>
             <p className={styles.aboutText}>
-              Propiedad is a premier luxury real estate advisory firm serving discerning families and businesses looking for verified properties in Noida and Ghaziabad.
+              Elara Estates is a premier luxury real estate advisory firm serving discerning families and investors seeking verified properties in Miami Beach and Fort Lauderdale.
             </p>
             {/* Social Links */}
             <div className={styles.socials}>
@@ -81,11 +81,11 @@ export default function Footer() {
           <div className={styles.linksCol}>
             <h4 className={styles.colTitle}>Locations Served</h4>
             <ul className={styles.linksList}>
-              <li><a href="#locations" onClick={(e) => handleFooterLinkClick(e, "locations")}>Greater Noida West</a></li>
-              <li><a href="#locations" onClick={(e) => handleFooterLinkClick(e, "locations")}>Noida Extension</a></li>
-              <li><a href="#locations" onClick={(e) => handleFooterLinkClick(e, "locations")}>Ghaziabad Central</a></li>
-              <li><a href="#locations" onClick={(e) => handleFooterLinkClick(e, "locations")}>Indirapuram</a></li>
-              <li><a href="#locations" onClick={(e) => handleFooterLinkClick(e, "locations")}>Raj Nagar Extension</a></li>
+              <li><a href="#locations" onClick={(e) => handleFooterLinkClick(e, "locations")}>Miami Beach</a></li>
+              <li><a href="#locations" onClick={(e) => handleFooterLinkClick(e, "locations")}>Brickell</a></li>
+              <li><a href="#locations" onClick={(e) => handleFooterLinkClick(e, "locations")}>Fort Lauderdale</a></li>
+              <li><a href="#locations" onClick={(e) => handleFooterLinkClick(e, "locations")}>Coral Gables</a></li>
+              <li><a href="#locations" onClick={(e) => handleFooterLinkClick(e, "locations")}>Aventura</a></li>
             </ul>
           </div>
 
@@ -95,15 +95,15 @@ export default function Footer() {
             <div className={styles.contactDetails}>
               <div className={styles.contactItem}>
                 <MapPin size={14} className={styles.contactIcon} />
-                <span>Sector 16, Greater Noida West, Uttar Pradesh 201306, India</span>
+                <span>1200 Brickell Ave, Miami, FL 33131, USA</span>
               </div>
               <div className={styles.contactItem}>
                 <Phone size={14} className={styles.contactIcon} />
-                <span>+91 98765 43210</span>
+                <span>+1 (305) 555-0192</span>
               </div>
               <div className={styles.contactItem}>
                 <Mail size={14} className={styles.contactIcon} />
-                <span>advisor@propiedad.in</span>
+                <span>advisor@elaraestates.com</span>
               </div>
             </div>
 
@@ -136,12 +136,12 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
           <p className={styles.copyright}>
-            © {new Date().getFullYear()} Propiedad. All rights reserved. Designed for Luxury Real Estate Markets.
+            © {new Date().getFullYear()} Elara Estates. All rights reserved. Designed for Luxury Real Estate Markets.
           </p>
           <div className={styles.bottomLinks}>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
-            <a href="#">RERA Disclaimers</a>
+            <a href="#">Fair Housing Notice</a>
           </div>
         </div>
 

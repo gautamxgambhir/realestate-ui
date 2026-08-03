@@ -13,7 +13,7 @@ const FEATURES_DATA = [
   {
     num: "02",
     title: "Expert Local Advisory",
-    description: "Our advisors possess unmatched hyper-local insights into Noida and Ghaziabad luxury zones.",
+    description: "Our advisors possess unmatched hyper-local insights into Miami Beach and Fort Lauderdale luxury zones.",
   },
   {
     num: "03",
@@ -30,7 +30,7 @@ export default function WhyChoose() {
         {/* Section Header */}
         <div className={styles.header}>
           <span className="label-gold subtitle">Our Guarantee</span>
-          <h2 className={styles.title}>Why Choose Propiedad</h2>
+          <h2 className={styles.title}>Why Choose Elara Estates</h2>
         </div>
 
         {/* Feature Grid */}

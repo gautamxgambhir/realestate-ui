@@ -77,14 +77,14 @@ export default function ConsultationModal({ isOpen, onClose, type, initialLocati
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className={styles.form}>
                 <div className={styles.header}>
-                  <span className={`${styles.tag} label-gold`}>Propiedad Luxury</span>
+                  <span className={`${styles.tag} label-gold`}>Elara Estates Luxury</span>
                   <h3 className={styles.title}>
                     {type === "consultation" ? "Private Consultation" : "VIP Site Visit"}
                   </h3>
                   <p className={styles.subtitle}>
                     {type === "consultation" 
                       ? "Connect with our senior advisors to map out your real estate goals."
-                      : "Experience architectural masterworks in Greater Noida West & Ghaziabad first-hand."}
+                      : "Experience architectural masterworks in Miami Beach & Fort Lauderdale first-hand."}
                   </p>
                 </div>
 
@@ -98,7 +98,7 @@ export default function ConsultationModal({ isOpen, onClose, type, initialLocati
                         id="modal-name"
                         type="text" 
                         required 
-                        placeholder="e.g. Rahul Sharma"
+                        placeholder="e.g. James Smith"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
                       />
@@ -114,7 +114,7 @@ export default function ConsultationModal({ isOpen, onClose, type, initialLocati
                         id="modal-phone"
                         type="tel" 
                         required 
-                        placeholder="e.g. +91 98765 43210"
+                        placeholder="e.g. +1 (305) 555-0192"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       />
@@ -130,7 +130,7 @@ export default function ConsultationModal({ isOpen, onClose, type, initialLocati
                         id="modal-email"
                         type="email" 
                         required 
-                        placeholder="e.g. rahul@example.com"
+                        placeholder="e.g. james@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
                       />
@@ -180,11 +180,11 @@ export default function ConsultationModal({ isOpen, onClose, type, initialLocati
                         value={formData.location}
                         onChange={(e) => setFormData({...formData, location: e.target.value})}
                       >
-                        <option value="noida-west">Greater Noida West</option>
-                        <option value="noida-ext">Noida Extension</option>
-                        <option value="ghaziabad">Ghaziabad Central</option>
-                        <option value="indirapuram">Indirapuram</option>
-                        <option value="raj-nagar">Raj Nagar Extension</option>
+                        <option value="noida-west">Miami Beach</option>
+                        <option value="noida-ext">Brickell</option>
+                        <option value="ghaziabad">Fort Lauderdale</option>
+                        <option value="indirapuram">Coral Gables</option>
+                        <option value="raj-nagar">Aventura</option>
                       </select>
                     </div>
                   </div>
@@ -230,11 +230,11 @@ export default function ConsultationModal({ isOpen, onClose, type, initialLocati
                   <div className={styles.summaryRow}>
                     <span>Location:</span>
                     <strong>
-                      {formData.location === "noida-west" && "Greater Noida West"}
-                      {formData.location === "noida-ext" && "Noida Extension"}
-                      {formData.location === "ghaziabad" && "Ghaziabad Central"}
-                      {formData.location === "indirapuram" && "Indirapuram"}
-                      {formData.location === "raj-nagar" && "Raj Nagar Extension"}
+                      {formData.location === "noida-west" && "Miami Beach"}
+                      {formData.location === "noida-ext" && "Brickell"}
+                      {formData.location === "ghaziabad" && "Fort Lauderdale"}
+                      {formData.location === "indirapuram" && "Coral Gables"}
+                      {formData.location === "raj-nagar" && "Aventura"}
                     </strong>
                   </div>
                   <div className={styles.summaryRow}>

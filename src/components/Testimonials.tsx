@@ -17,25 +17,25 @@ interface Testimonial {
 const TESTIMONIALS: Testimonial[] = [
   {
     id: "test-1",
-    name: "Vikramaditya Roy",
+    name: "Victor Ashton",
     role: "Managing Director, V-Tech Solutions",
-    quote: "Finding a premium commercial showroom that checked all legal and accessibility boxes in Ghaziabad seemed impossible. Propiedad streamlined the search beautifully. Their verification audit is iron-clad and their transparency is refreshing.",
+    quote: "Finding a premium commercial showroom that checked all legal and accessibility boxes in Fort Lauderdale seemed impossible. Elara Estates streamlined the search beautifully. Their verification audit is iron-clad and their transparency is refreshing.",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80"
   },
   {
     id: "test-2",
-    name: "Priya & Anish Goel",
-    role: "Homeowners, Greater Noida West",
-    quote: "We purchased our dream duplex villa in Noida Extension through Propiedad. Their local market knowledge is profound. They handled the paperwork, home financing, and developer coordination seamlessly. Simply outstanding support!",
+    name: "Sarah & Daniel Cole",
+    role: "Homeowners, Miami Beach",
+    quote: "We purchased our dream duplex villa in Miami Beach through Elara Estates. Their local market knowledge is profound. They handled the paperwork, home financing, and developer coordination seamlessly. Simply outstanding support!",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80"
   },
   {
     id: "test-3",
-    name: "Dr. Sameer Malhotra",
-    role: "Senior Consultant, Max Healthcare",
-    quote: "As an investor seeking high-yield residential assets, trust was my primary concern. Propiedad's legal advisory and project vetting gave me the security I needed. They don't just broker; they consult with absolute integrity.",
+    name: "Dr. Marcus Reid",
+    role: "Senior Consultant, Bayfront Medical",
+    quote: "As an investor seeking high-yield residential assets, trust was my primary concern. Elara Estates' legal advisory and project vetting gave me the security I needed. They don't just broker; they consult with absolute integrity.",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80"
   }
